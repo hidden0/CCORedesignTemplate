@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="redesign_master.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="header" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/css/master.css" rel="stylesheet" type="text/css" />
+    <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class='navbar navbar-inverse navbar-static-top' id="logo-social-header">
+    	    <div class='container hidden-xs' id='top-area'>
+        	    <div class='row'>
+            	    <div class='col-md-4'>
+                        <a href='<%=GetGlobalResourceObject("URLs", "home") %>'><img src='<%=GetGlobalResourceObject("img_paths_general", "ccoLogo" ) %>' alt="CCO Logo"/></a>
+                    </div>
+
+                    <div class='col-md-4'>
+                        <h4 class='white'>Center for Career Opportunities</h4>
+                        <ul class='socials' style='margin-left: 15px'>
+                            <li class='social-facebook'>
+                            	<a href='<%=GetGlobalResourceObject("URLs", "facebook" ) %>' >Facebook</a>
+                            </li>
+                            
+                            <li class='social-twitter'> 
+                            	<a href= '<%=GetGlobalResourceObject("URLs", "twitter" ) %>' >Twitter</a>
+                            </li>
+                            
+                            <li class='social-linked'>  
+                            	<a href= '<%=GetGlobalResourceObject("URLs", "linkedin" ) %>' >LinkedIn</a>
+                            </li>
+                            
+                            <li class='social-instagram'>
+                            	<a href= '<%=GetGlobalResourceObject("URLs", "instagram" ) %>' >Instagram</a>
+                            </li>
+                            
+                            <li class='social-pinterest'>
+                            	<a href= '<%=GetGlobalResourceObject("URLs", "pinterest" ) %>' >Pinterest</a>
+                            </li>
+                            
+                            <li class='social-wordpress'>
+                            	<a href= '<%=GetGlobalResourceObject("URLs", "wordpress" ) %>' >Wordpress</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class='col-md-4'>
+                        <a href='https://www.purdue.edu'><img src='<%=GetGlobalResourceObject("img_paths_general", "purdueLogo") %>' alt="Purdue Logo" /></a>
+                    </div>
+                </div>
+            </div> <!-- close .container#top-area-->
+
+            <div class='container' id="main-nav">
+        	    <div class="navbar-header">
+            	    <button class="navbar-toggle" id="main-trigger" type="button">
+        			    <span class="sr-only">Toggle navigation</span>
+        			    <span class="icon-bar"></span>
+        			    <span class="icon-bar"></span>
+        			    <span class="icon-bar"></span>
+      			    </button>
+                    <a class="navbar-brand pull-right visible-xs" href="#">Purdue CCO</a>
+                </div>
+            
+        	    <nav class='collapse navbar-collapse' role='navigation' id="main">
+            	    <ul class='nav navbar-nav' id="main-navi">
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "home") %>'>Home</a>
+                            
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "student") %>'>Student</a>
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "alumni") %>'>Alumni</a>
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "employer") %>'>Employer</a>
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "faculty") %>'>Faculty</a>
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "parent") %>'>Parent</a>
+                        </li>
+                        <li>
+                            <a href='<%=GetGlobalResourceObject("URLs", "about") %>'>About</a>
+                        </li>
+                    </ul>
+
+                    
+            		    <input name='q' type='text' id='search-box' size='40' />
+            	     
+                </nav>
+              </div> <!-- close .container#main-nav-->
+              
+                       
+           </div> <!-- close #logo-social-container-->
+           <%
+                           string path = Request.Path;
+                           int slashes = path.Split('/').Length;
+                           
+                           if (slashes > 2)
+                           {
+                               string part = path.Substring(1);
+
+                               
+                               string subpath = part.Substring(0,part.IndexOf('/'));
+                               
+           %>
+           <div class='navbar navbar-inverse hidden-xs' id="subnav">
+             <div class="container">
+             	<div class="navbar-header">
+             	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#subnav-menu">
+                	<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+      			</button>
+                </div>
+              <nav class='collapse navbar-collapse' role='navigation' id="subnav-menu">
+                <ul class='nav navbar-nav'>
+                        <asp:ContentPlaceHolder Id="NavBar" runat="server">
+
+                        </asp:ContentPlaceHolder>   
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <% } %>
+           <div id="sidr-menu">
+            	    <input name='q' type='text' id="sidr-search" size='40' style="margin-top: 2px" placeholder="search"/>
+                
+
+                <ul>
+                    <li>
+                        <a href='<%=GetGlobalResourceObject("URLs", "home" ) %>'>Home</a>
+                    </li>
+                    <li class="has-sub"><a href="#">Students</a>
+                	<ul>
+                    	file="student.html"
+                    </ul>
+                </li>
+                <li class="has-sub"><a href='#'>Alumni</a>
+                	<ul>
+                    	file="alumni.html"
+                    </ul>
+                </li>
+                <li class="has-sub"><a href='#'>Employers</a>
+                	<ul>
+                    	file="employers.html" 
+                    </ul>
+                </li>
+                <li class="has-sub"><a href='#'>Faculty</a>
+                	<ul>
+                    	file="faculty.html"
+                    </ul>
+                </li>
+                <li class="has-sub"><a href='#'>Parents</a>
+                	<ul>
+                    	file="parents.html"
+                    </ul>
+                </li>
+                <li class="has-sub"><a href='#'>About</a>
+        			<ul>
+                		#include file="about.html"
+                    </ul> 
+                </li>
+                </ul>
+           </div> <!-- close #sidr-menu-->
+    <div id="wrap">
+        <div class="container">
+            <asp:ContentPlaceHolder Id="DefaultContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        </div> <!-- close .container-->
+        
+    </div> <!-- close #wrap -->   
+    <div id="push"></div>
+    <div id="resources-container">
+    	<div class="container">
+        	<div class="col-md-12">
+            	<div class="row">
+            	<div class="col-md-2">
+                	<a href="#">CCO Handbook</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">CareerWiki</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">myCCO/NACElink</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Hire Boilermakers</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">CCO Partners</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Purdue E-Board</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                	<a href="#">Career Videos</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Career Fair & Events</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Invite CCO to Speak</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Stats & Salaries</a>
+                </div>
+                <div class="col-md-2">
+                	<a href="#">Travel to Purdue</a>
+                </div>
+               
+               </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer">
+    	<div class="container" id="footer-body">
+    		<div class="col-md-8">
+            	<p>Purdue University, West Lafayette, IN, 47907, <strong>(765) 494-3981</strong></p>
+                <p><a href="#">&copy;2012 Purdue University</a> | <a href="#">An equal access/equal opportunity university</a> | Email: <a href="#">askcco@purdue.edu</a></p>
+                <p>If you have trouble accessing this page because of a disability, please contact <a href="#">webmaster-cco@purdue.edu</a></p>
+                <p>Center for Career Opportunities maintains a recruitment process that is fair and equitable to candidates and employing organizations.</p>
+            </div>
+        </div>
+    </div>
+        
+    
+</form>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type="text/javascript"></script>
+<script src="/bundled.min.js" type="text/javascript"></script>
+<script src="/html5shiv.js" type="text/javascript"></script>
+<script src="/respond.min.js" type="text/javascript"></script>
+<script src="/global.js" type="text/javascript"></script>
+
+</body>
+
+</html>

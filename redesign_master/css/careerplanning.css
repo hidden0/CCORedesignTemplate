@@ -1,0 +1,343 @@
+﻿/* CSS Document */
+
+/* This CSS is global styles used by teh career and major planning student pages */
+/*** New Career and Major Styles **/
+/* Divisions for Content below */
+.careerBox {
+	border-radius:15px;
+	border:2px solid #000;
+	padding-top:0px;
+	padding-left:0px;
+	padding-bottom:0px;
+	padding-right:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:10px;
+	background-color:#fff;
+}
+.careerBox .left {
+	position:relative;
+	padding-left:4px;
+	padding-top:4px;
+	
+	float:left;
+}
+.careerBox .left img {
+	border:none;
+	text-align:left;
+	padding:3px;
+}
+.careerBox .right {
+	padding-left:110px;
+	text-align:left;
+	margin-top:10px;
+	margin-left:20px;
+}
+.careerBox h2 {
+	font-size:18px;
+	font-family: 'Calibri', Garamond, 'Comic Sans';
+}
+.shadow .careerBox p {
+	padding-right:5px;
+	margin-bottom:5px;
+	font-family: 'Calibri', Garamond, 'Comic Sans';
+}
+.readMore {
+	padding:10px;
+}
+.read {
+	cursor:pointer;
+}
+.shadow {
+	margin-top:0px;
+	margin-bottom:20px;
+	box-shadow: 2px 2px 15px rgb(136, 136, 136);
+	-moz-box-shadow: 2px 2px 15px rgb(136, 136, 136);
+ 	-webkit-box-shadow: 2px 2px 15px rgb(136, 136, 136);
+	padding:10px;
+	border:1px solid #ccc;
+	z-index:2;
+	background-color:#fff;
+	border:1px solid #ccc;
+	position:relative;
+	padding-top:20px;
+}
+.pageHeader {
+	width:300px;
+	text-align:center;
+	font-size:19px;
+	font-weight:bolder;
+	background-color:#575353;
+	color:#fff;
+	position:absolute;
+	azimuth:center;
+	top:-12px;
+	border:1px solid #ccc;
+	z-index:10;
+	padding:5px;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #575353 0%, #CCAFC4 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #575353 0%, #CCAFC4 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #575353 0%, #CCAFC4 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #575353), color-stop(1, #CCAFC4));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #575353 0%, #CCAFC4 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #575353 0%, #CCAFC4 100%);
+}
+.pageHeader.red {
+	background-image: -ms-linear-gradient(top, #ed3638 0%, #e7807e 100%);
+	background-image: -moz-linear-gradient(top, #ed3638 0%, #e7807e 100%);
+	background-image: -o-linear-gradient(top, #ed3638 0%, #e7807e 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ed3638), color-stop(1, #e7807e));
+	background-image: -webkit-linear-gradient(top, #ed3638 0%, #e7807e 100%);
+	background-image: linear-gradient(to bottom, #ed3638 0%, #e7807e 100%);
+}
+.pageHeader.orange {
+	background-image: -ms-linear-gradient(top, #f58738 0%, #f2bf9b 100%);
+	background-image: -moz-linear-gradient(top, #f58738 0%, #f2bf9b 100%);
+	background-image: -o-linear-gradient(top, #f58738 0%, #f2bf9b 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f58738), color-stop(1, #f2bf9b));
+	background-image: -webkit-linear-gradient(top, #f58738 0%, #f2bf9b 100%);
+	background-image: linear-gradient(to bottom, #f58738 0%, #f2bf9b 100%);
+}
+.pageHeader.green {
+	background-image: -ms-linear-gradient(top, #83bb40 0%, #c6e3a5 100%);
+	background-image: -moz-linear-gradient(top, #83bb40 0%, #c6e3a5 100%);
+	background-image: -o-linear-gradient(top, #83bb40 0%, #c6e3a5 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #83bb40), color-stop(1, #c6e3a5));
+	background-image: -webkit-linear-gradient(top, #83bb40 0%, #c6e3a5 100%);
+	background-image: linear-gradient(to bottom, #83bb40 0%, #c6e3a5 100%);
+}
+.pageHeader.blue {
+	background-image: -ms-linear-gradient(top, #24aab6 0%, #6ee0ea 100%);
+	background-image: -moz-linear-gradient(top, #24aab6 0%, #6ee0ea 100%);
+	background-image: -o-linear-gradient(top, #24aab6 0%, #6ee0ea 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #24aab6), color-stop(1, #6ee0ea));
+	background-image: -webkit-linear-gradient(top, #24aab6 0%, #6ee0ea 100%);
+	background-image: linear-gradient(to bottom, #24aab6 0%, #6ee0ea 100%);
+}
+.pageHeader.white {
+	background-image: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+	background-image: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #f2f2f2));
+	background-image: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+	background-image: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
+}
+#video {
+	position:relative;
+	float:right;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#video3 {
+	position:relative;
+	float:right;
+	margin-top:-10px;
+	margin-bottom:10px;
+	height:170px;
+}
+/*** Modal Overlay ***/
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+	filter:alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+#video1 {
+    display:none;
+	background:#000;
+	color:#FFF;
+	padding:20px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
+}
+#video1 ul {
+	list-style-type:circle;
+	margin-left:40px;
+}
+#video1 h1 {
+	margin:10px;
+}
+#video1 li {
+	margin:5px;	
+}
+#video1 .modal_close a {
+	font-family:Arial, Helvetica, sans-serif;
+	float:right;
+	color:#FFF;
+	padding:5px;
+}
+/*** Career and Major Planning - Landing Page CSS ***/
+ul#careers {
+	position:relative;
+	background:url("/Student/images/compass.png") no-repeat 0 0;
+	background-size:463px 468px;
+	top:0px;
+	left:0px;
+	list-style: none;
+	width: 463px;
+	height: 468px;
+	z-index:6;
+}
+ul#careers li {
+	position: absolute;
+}
+ul#careers li a{
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+#tooltip1 {
+	width:130px;
+	height: 150px;
+	top: 25px;
+	left: 15px;
+}
+#tooltip2 {
+	width: 120px;
+	height: 150px;
+	top: 25px;
+	left: 310px;
+}
+#tooltip3 {
+	width: 120px;
+	height: 150px;
+	top: 335px;
+	left: 15px;
+}
+#tooltip4 {
+	width: 120px;
+	height: 150px;
+	top: 335px;
+	left: 310px;
+}
+#tooltip5 {
+	width: 120px;
+	height: 200px;
+	top: 150px;
+	left: 140px;
+}
+#tooltip6 {
+	height: 200px;
+	top: -130px;
+	left: 150px;
+}
+ul#careers li a:hover {
+	background: url("/Student/images/compass.png") no-repeat -50 0;
+	background-size:463px 468px;
+}
+ul#careers li#tooltip1 a:hover {
+	background-position: -15 -38px;
+}
+ul#careers li#tooltip2 a:hover {
+	background-position: 400px -38px;
+}
+ul#careers li#tooltip3 a:hover {
+	background-position: -15px -490px;
+}
+ul#careers li#tooltip4 a:hover {
+	background-position: -220px -497px;
+}
+ul#careers li#tooltip5 a:hover {
+	background-position: -220px -497px;
+}
+ul#careers li a span {
+	display: none;
+}
+ul#careers li a:hover span {
+	display: block;
+}
+ul#careers li a:hover span {
+	width: 150px;
+	background: #fff;
+	position: relative;
+	text-align:left;
+	top: 60%;
+	margin:auto;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border:1px solid #000;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.spanClass {
+	width: 160px;
+	background: #fff;
+	position: relative;
+	text-align:left;
+	top: 60%;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border:1px solid #000;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+ul#careers .spanText {
+	padding:3px;
+	font-size:14px;
+}
+/*** Testimonials ***/
+.testimonial {
+	border:0px solid #ccc;
+	padding:0px;
+	margin:0px;
+	float:right;
+	width:210px;
+	background-color:#FFF;
+}
+.testimonial .img {
+	border:1px solid #ccc;
+	padding:5px;
+	margin-right:5px;
+	margin-bottom:2px;
+	float:left;
+}
+.testimonial .content {
+	padding:5px;
+	margin:5px;
+}
+/* IE Fixes */
+#ie_bg_fix {
+	position:absolute;
+	left:224px;
+	width: 463px;
+	height: 468px;
+	z-index:6;
+}
+ul#navtest {
+	display:inline;
+}
+/* IFRAME zooming */
+#vid_frame {
+	zoom: 1.2;
+    -moz-transform: scale(1.0);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1.2);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1.2);
+    -webkit-transform-origin: 0 0;	
+	
+	position:relative;
+	width:220px;
+	height:130px;
+	margin:0px;
+	padding:0px;
+	top:-20px;
+}

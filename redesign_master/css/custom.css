@@ -1,0 +1,287 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+body {
+	min-height: 80%;
+	font-size: 125%;
+	
+}
+
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+/* Color Class Helpers */
+
+.white {
+	color: #fff;
+}
+
+.oldgold {
+	color: #a3792c;
+}
+
+.newgold {
+	color: #edb700;
+}
+
+.grey40 {
+	color: #a7a9ac;
+}
+
+.grey20 {
+	color: #d1d3d4;
+}
+
+.offblack {
+	color: #222;
+}
+
+.black {
+	color: #000;
+}
+
+/* End Color Classes */
+
+
+/* Main Navigation */
+
+.navbar {
+	border-radius: 0px;
+	border: none;
+	margin-bottom: 0px;
+}
+
+.nav > li > a {
+	font-size: 16px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: rgb(228,174,35); 
+}
+
+#main-trigger {
+	float: left;
+}
+
+/* End Main Navigation */
+
+/* Sub Navigation */
+
+#subnav {
+	background: #edb700;
+}
+
+#subnav .nav li > a {
+	color: #222;
+	text-shadow: none;
+}
+
+#subnav .nav li > a:hover {
+	color: white;
+	background: #222;
+}
+
+#sidr-menu {
+	display: none;
+}
+
+.sidr-class-has-sub ul {
+	display: none;
+}
+
+#sidr-id-sidr-search {
+	margin-top: 10px;
+	background: none;
+	font-size: 16px;
+}
+
+#sidr-id-sidr-search:focus {
+	background-color: white;
+	color: #222;
+	outline: none;
+}
+
+.sidr-class-has-sub ul > li > a {
+	color: #edb700 !important;
+}
+
+
+/* End Sub Nav */
+
+#top-area {
+	margin-top: 35px;
+}
+
+/* Social Icons */
+
+ul.socials {
+	list-style-type: none;
+	float: left;
+	padding: 0;
+	margin: 0;
+	line-height: 1.5;
+
+}
+
+.socials li {
+	display: inline;
+	float: left;
+}
+
+.socials li a {
+	width: 36px;
+	height: 36px;
+	-webkit-background-size: 20px 20px;
+	-moz-background-size: 20px 20px;
+	-o-background-size: 20px 20px;
+	background-size: 20px 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: transparent;
+	font-size: 0;
+	display: block;
+	-webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    -ms-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+
+.socials li.social-twitter a {
+	background-image: url("../img/social/twitter_white.png");
+}
+
+.socials li.social-twitter a:hover {
+	background-color: rgb(0,190,246);
+}
+
+.socials li.social-facebook a {
+	background-image: url("../img/social/facebook_white.png");
+}
+
+.socials li.social-facebook a:hover {
+	background-color: rgb(59,89,152);
+}
+
+.socials li.social-pinterest a {
+	background-image: url("../img/social/pinterest_white.png");
+}
+
+.socials li.social-pinterest a:hover {
+	background-color: rgb(203,32,39);
+}
+
+.socials li.social-instagram a {
+	background-image: url("../img/social/instagram_white.png");
+}
+
+.socials li.social-instagram a:hover {
+	background-color: rgb(81,127,164);
+}
+
+.socials li.social-linked a {
+	background-image: url("../img/social/linkedin_white.png");
+}
+
+.socials li.social-linked a:hover {
+	background-color: rgb(0,134,182);
+}
+
+.socials li.social-wordpress a {
+	background-image: url("../img/social/wordpress_white.png");
+}
+
+.socials li.social-wordpress a:hover {
+	background-color: rgb(213,78,33);
+}
+
+/* End Social Icons */
+
+/* Search */
+
+#search {
+	margin-top: 9px;
+}
+
+#search input[type="text"], #search-box {
+    background: url(../img/search-white.png) no-repeat 10px 9px #444;
+    border: 0 none;
+    color: #999;
+    width:35px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin-top: 7px;
+    /*-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;*/
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    outline: none;
+}
+
+#search input[type="text"]:focus, #sidr-id-search-box, #search-box:focus {
+    background: url(../img/search-dark.png) no-repeat 10px 9px #fcfcfc;
+    color: #6a6f75;
+    width: 198px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* End Search */
+
+/* Footer */
+
+#wrap 
+{
+  
+  min-height: 80%;
+  height: auto;
+  
+  /* Negative indent footer by it's height */
+  margin: 0 auto;
+}
+
+#resources-container {
+	background-color: #d1d3d4;
+}
+
+#resources-container .row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#resources-container a {
+	color: black;
+	font-weight: 600;
+	
+}
+
+
+#push, #footer {
+  height: 60px;
+}
+
+#footer {
+  height: auto !important;
+  background-color: #222;
+  color: #fff;
+}
+
+#footer .col-md-8 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#footer a {
+	color: #edb700;
+	
+}
+
+/*End Footer */
+
+
